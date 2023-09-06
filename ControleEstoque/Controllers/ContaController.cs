@@ -25,9 +25,9 @@ namespace ControleEstoque.Controllers
                 return View(login);
             }
 
-            var achou = (login.Usuario == "gabrielmotta" && login.Senha == "123456");
+            var usuario = (login.Usuario == "gabrielmotta" && login.Senha == "123456");
 
-            if (achou)
+            if (usuario)
             {
                 FormsAuthentication.SetAuthCookie(login.Usuario, login.LembrarMe);
                 if (Url.IsLocalUrl(returnUrl))
