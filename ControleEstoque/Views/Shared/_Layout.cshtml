@@ -7,9 +7,24 @@
     <title>@ViewBag.Title - Controle de Estoque</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+<style>
+    .navbar-custom {
+        background-color: cadetblue; /* Fundo azul claro para a navbar */
+        border-color: lightblue; /* Ajuste da cor da borda */
+    }
+
+        .navbar-custom .navbar-brand,
+        .navbar-custom .nav > li > a {
+            color: black; /* Ajusta a cor do texto dos links para branco */
+        }
+
+            .navbar-custom .nav > li > a:hover {
+                color: black; /* Cor do texto ao passar o mouse */
+            }
+</style>
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-custom navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -95,6 +110,7 @@
             </div>
         </div>
     </div>
+
     <div class="container body-content">
         @RenderBody()
         <hr />
